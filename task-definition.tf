@@ -3,13 +3,12 @@ data "aws_ecs_task_definition" "wordpress" {
 }
 
 resource "aws_ecs_task_definition" "wordpress" {
-    family                = "hello_world",
+    family                = "hello_world"
     container_definitions = <<DEFINITION
 [
   {
     "name": "wordpress",
-     "network_mode": "Bridge",
-  "links": [
+    "links": [
       "mysql"
     ],
     "image": "wordpress",
