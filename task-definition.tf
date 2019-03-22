@@ -1,6 +1,6 @@
-data "aws_ecs_task_definition" "wordpress" {
-  task_definition = "${aws_ecs_task_definition.wordpress.family}"
-}
+#data "aws_ecs_task_definition" "wordpress" {
+#  task_definition = "${aws_ecs_task_definition.wordpress.family}"
+#}
 
 resource "aws_ecs_task_definition" "wordpress" {
     family                = "hello_world"
@@ -38,3 +38,4 @@ resource "aws_ecs_task_definition" "wordpress" {
 ]
 DEFINITION
 }
+ 
